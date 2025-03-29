@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { USERS } from './users';
+
+const randomIndex = Math.floor(Math.random() * USERS.length);
 
 @Component({
   selector: 'app-user',
@@ -7,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-
+  selectedUser = USERS[randomIndex];
 }
